@@ -3,7 +3,9 @@ pipeline{
   stages {
   stage('maven_install') {
     steps {
-      // One or more steps need to be included within the steps block.
+      withmaven{
+      sh 'mvn clean install' 
+      }
     }
   }
 
